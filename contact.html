@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact and Report Error</title>
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyBtvjBEYI/6D6uA6tF1bWt7LEU1s1ebVX" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+        }
+
+        .submit-button {
+            background-color: #acac92;;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+
+
+    
+
+        .submit-button:hover {
+            background-color: green;
+        }
+
+
+
+        .footer {
+    margin-bottom:10px ;
+    width: 100%;
+    background-color: #acac92;
+  color: #fff;
+  text-align: center;
+}
+
+.navbar {
+    margin-top: -58px;
+  background-color: #acac92;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 1470px;
+  margin-left: -58px;
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo-container img {
+  max-height: 50px;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0;
+  padding: 15px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar li.logout {
+  margin-left: auto;
+} 
+   
+   
+</style>
+   
+
+
+</head>
+
+<body>
+
+    <div >
+        <nav class="navbar">
+          <div class="logo-container">
+              Furniture Store
+            <img src="logo.png" alt="Logo">
+          </div>
+          <ul>
+            <li><a href="register.html">Add User</a></li>
+            <li><a href="create.html">Add Product</a></li>
+            <li><a href="list.php">List Product</a></li>
+            <li><a href="contact.html">Report Error</a></li>
+            <li class="logout"><a href="logout.html"><i class="fas fa-door-open"></i> Log Out</a></li>
+          </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h2 style="color: #acac92">Contact and Report Error </h2>
+        <div class="contact-form">
+            <form onsubmit="showMessage(event)">
+                <label for="name">Your name-surname</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="message">Your message:</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+
+                <input type="submit" value="Send" class="submit-button" style="color:white;">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();  
+
+            alert("Your error report will be reported to us and the necessary corrections will be made. Thanks.");
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIEX6Lq8J3pT9cAXHoNg1lCCImDkDTYqI4cDSc5faOKb3pN2Jv5Sku" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyBtvjBEYI/6D6uA6tF1bWt7LEU1s1ebVX" crossorigin="anonymous"></script>
+
+
+   
+    
+    
+    
+    <div class="footer">
+        <p>Adres: Beşyol Mahallesi, İnönü Caddesi, İstanbul, Türkiye</p>
+        <p>Telefon: +123 456 7890</p>
+        <p>E-posta: furniturestore@email.com</p>
+        <p>&copy; 2024 Furniture Store Application. All rights reserved.</p>
+      </div>
+    
+    
+  
+
+</body>
+</html>
